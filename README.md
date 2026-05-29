@@ -1,3 +1,5 @@
+Author: Krishna Nakum
+
 # PlaywrightDemo
 
 An end-to-end web automation testing framework built using **Playwright** and **TypeScript**. This repository serves as a comprehensive implementation of modern test automation practices, covering UI testing, API validation, and robust framework architecture patterns.
