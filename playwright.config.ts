@@ -19,12 +19,16 @@ export default defineConfig({
 
   /* Run tests in files in parallel */
   fullyParallel: true,
+  //If the above line is commented, test will run in Serial execution
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
+  //workers: process.env.CI ? 1 : undefined,
+  workers:5,
+  //For serial execution only one 1 worker is needed
+  //For parallel execution, if 1 worker defined here, it will execute in serial mode only.
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
@@ -43,6 +47,7 @@ export default defineConfig({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
+      //fullyParallel: true, --To execute parallel/serial at browser level
     },
 
 /*
