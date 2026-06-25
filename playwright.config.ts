@@ -26,7 +26,7 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
   //workers: process.env.CI ? 1 : undefined,
-  workers:5,
+  workers:1,
   //For serial execution only one 1 worker is needed
   //For parallel execution, if 1 worker defined here, it will execute in serial mode only.
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */

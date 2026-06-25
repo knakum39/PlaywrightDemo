@@ -18,6 +18,11 @@
   "homepage": "https://github.com/knakum39/PlaywrightDemos#readme",
   "devDependencies": {
     "@playwright/test": "^1.60.0",
-    "@types/node": "^25.9.1"
+    "@types/node": "^25.9.1",
+    "allure-playwright": "^3.10.1"
+  },
+  "dependencies": {
+    "csv-parse": "^7.0.0",
+    "xlsx": "^0.18.5"
   }
 }
