@@ -26,19 +26,34 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
   //workers: process.env.CI ? 1 : undefined,
-  workers:1,
+  workers:3,
   //For serial execution only one 1 worker is needed
   //For parallel execution, if 1 worker defined here, it will execute in serial mode only.
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  //reporter: 'html',
+/*   reporter: [ ['html',{open:'always',outputFolder:'html-report'}],
+              //['list'],
+             // ['line'],
+             // ['dot'],
+              //['junit',{outputFile: 'results.xml'}],
+              //['json',{outputFile: 'results.json'}],
+              ['allure-playwright'],
+            ], */
+  reporter: "allure-playwright",
+  //reporter: './my-custom-reporter.ts',
+  //reporter: [ ['html',{open: 'never'}]]
+  //reporter: [ ['html',{open: 'on-failure'}]]
+
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
-    
+    //trace: 'on-first-retry',
+    trace: 'off',
+    screenshot:'only-on-failure', //Capture the screenshot by Krishna
+    video:'retain-on-failure', //Capture the video by Krishna
   },
 
   /* Configure projects for major browsers */
@@ -50,13 +65,13 @@ export default defineConfig({
       //fullyParallel: true, --To execute parallel/serial at browser level
     },
 
-/*
+
     {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
     },
 
-    {
+   /* {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
     },*/
