@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/knakum39/PlaywrightDemos#readme",
   "devDependencies": {
+    "@axe-core/playwright": "^4.12.1",
     "@playwright/test": "^1.60.0",
     "@types/node": "^25.9.1",
     "allure": "^3.13.1",

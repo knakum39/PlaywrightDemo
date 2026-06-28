@@ -61,15 +61,17 @@ export default defineConfig({
     
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: 
+      { ...devices['Desktop Chrome'] },
       //fullyParallel: true, --To execute parallel/serial at browser level
     },
 
 
-    {
+    /* {
       name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
+      use: 
+      { ...devices['Desktop Firefox'] },
+    }, */
 
    /* {
       name: 'webkit',
