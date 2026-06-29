@@ -1,0 +1,12 @@
+[
+  '\n        United States\n      ',
+  '\n        Canada\n      ',
+  '\n        United Kingdom\n      ',
+  '\n        Germany\n      ',
+  '\n        France\n      ',
+  '\n        Australia\n      ',
+  '\n        Japan\n      ',
+  '\n        China\n      ',
+  '\n        Brazil\n      ',
+  '\n        India\n      '
+]
