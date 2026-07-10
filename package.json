@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "Author: Krishna Nakum (DBF)",
   "main": "index.js",
-  "scripts": {},
+  "scripts": { "test": "playwright test",
+  "test:headed": "playwright test --headed",
+  "test:ui": "playwright test --ui",
+  "report": "playwright show-report"},
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/knakum39/PlaywrightDemos.git"
