@@ -1,7 +1,6 @@
 import {test,expect} from "@playwright/test";
 import AxeBuilder from '@axe-core/playwright';
 
-//Test for branch 
 test('accessibility test', async({page},testInfo)=>{
 
     //await page.goto("https://demowebshop.tricentis.com/");
