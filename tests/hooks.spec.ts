@@ -11,13 +11,13 @@ test.afterAll('AfterAll', async()=>{
 
 
 
-test.beforeEach('Beforeach',async()=>{
+test.beforeEach('BeforeEach',async()=>{
 
     console.log("this is Before each....")
 
 })
 
-test.afterEach('Aftereach',async()=>{
+test.afterEach('AfterEach',async()=>{
 
     console.log("this is After each....")
 
