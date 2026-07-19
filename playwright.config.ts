@@ -31,7 +31,8 @@ export default defineConfig({
   //For parallel execution, if 1 worker defined here, it will execute in serial mode only.
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   //reporter: 'html',
-reporter: [ ['html',{open:'always',outputFolder:'html-report'}],
+reporter: [ //['html',{open:'always',outputFolder:'html-report'}],
+                ['html'],
               //['list'],
              // ['line'],
              // ['dot'],
