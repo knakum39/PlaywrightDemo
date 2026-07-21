@@ -31,7 +31,8 @@ export default defineConfig({
   //For parallel execution, if 1 worker defined here, it will execute in serial mode only.
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   //reporter: 'html',
-reporter: [ ['html',{open:'always',outputFolder:'html-report'}],
+reporter: [ //['html',{open:'always',outputFolder:'html-report'}],
+                ['html'],
               //['list'],
              // ['line'],
              // ['dot'],
@@ -51,6 +52,7 @@ reporter: [ ['html',{open:'always',outputFolder:'html-report'}],
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     //trace: 'on-first-retry',
+    viewport: {width:1280, height:720},
     trace: 'retain-on-failure',
     screenshot:'only-on-failure', //Capture the screenshot by Krishna
     video:'retain-on-failure', //Capture the video by Krishna
