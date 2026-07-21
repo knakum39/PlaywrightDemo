@@ -52,6 +52,7 @@ reporter: [ //['html',{open:'always',outputFolder:'html-report'}],
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     //trace: 'on-first-retry',
+    viewport: {width:1280, height:720},
     trace: 'retain-on-failure',
     screenshot:'only-on-failure', //Capture the screenshot by Krishna
     video:'retain-on-failure', //Capture the video by Krishna
